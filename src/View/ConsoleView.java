@@ -15,6 +15,7 @@ public class ConsoleView {
     public static void viewTop() {
         System.out.println(TOP);
     }
+
     public static void viewFooter() {
         System.out.println(BOTTOM);
     }
@@ -24,18 +25,19 @@ public class ConsoleView {
         for (int i = 0; i < 10; i++) {
             System.out.print("|");
             for (int j = 0; j < 10; j++) {
-                System.out.print(getChar(new Position(i,j)));
+                System.out.print(getChar(new Position(i, j)));
             }
             System.out.print("-> " + Main.whiteSide.get(i).getInfo() +
-                    "\t" + progressBar((int)Main.whiteSide.get(i).getHealth(), (int)Main.whiteSide.get(i).getMaxHealth()) +
+                    "\t"
+                    + progressBar((int) Main.whiteSide.get(i).getHealth(), (int) Main.whiteSide.get(i).getMaxHealth()) +
                     "\t | " + Main.darkSide.get(i).getInfo() + "\t" +
-                    progressBar((int)Main.darkSide.get(i).getHealth(), (int)Main.darkSide.get(i).getMaxHealth()));
+                    progressBar((int) Main.darkSide.get(i).getHealth(), (int) Main.darkSide.get(i).getMaxHealth()));
             System.out.println();
-
 
         }
         viewFooter();
     }
+
     public static String getFirstLetter(BaseHero hero) {
         return hero.getClass().getSimpleName().charAt(0) + "";
     }
@@ -43,17 +45,29 @@ public class ConsoleView {
     public static String getChar(Position position) {
         String str = "| ";
         for (int i = 0; i < 10; i++) {
-            if (Main.whiteSide.get(i).getPosition().isEqual(position))
-                str = AnsiColors.ANSI_BLUE + getFirstLetter(Main.whiteSide.get(i)) + AnsiColors.ANSI_RESET;
-            if (Main.darkSide.get(i).getPosition().isEqual(position))
-                str = "|" + AnsiColors.ANSI_GREEN + getFirstLetter(Main.darkSide.get(i)) + AnsiColors.ANSI_RESET + "|";
+            boolean alive = true;
+            if (Main.whiteSide.get(i).getPosition().isEqual(position)) {
+                if (Main.whiteSide.get(i).getState() == States.DEAD) {
+                    alive = false;
+                    str = AnsiColors.ANSI_RED + getFirstLetter(Main.whiteSide.get(i)) + AnsiColors.ANSI_RESET;
+                } else
+                    str = AnsiColors.ANSI_BLUE + getFirstLetter(Main.whiteSide.get(i)) + AnsiColors.ANSI_RESET;
+            }
+            if (Main.darkSide.get(i).getPosition().isEqual(position) && alive) {
+                if (Main.darkSide.get(i).getState().equals(States.DEAD))
+                    str = "|" + AnsiColors.ANSI_RED + getFirstLetter(Main.darkSide.get(i)) + AnsiColors.ANSI_RESET
+                            + "|";
+                else
+                    str = "|" + AnsiColors.ANSI_GREEN + getFirstLetter(Main.darkSide.get(i)) + AnsiColors.ANSI_RESET
+                            + "|";
+            }
         }
         return str;
     }
 
     public static String progressBar(int remain, int total) {
         int maxBarSize = 10;
-        int remainProcent = ((100*remain)/total/maxBarSize);
+        int remainProcent = ((100 * remain) / total / maxBarSize);
         char defaultChar = '-';
         String icon = "*";
         String bar = new String(new char[maxBarSize]).replace('\0', defaultChar) + "]";
@@ -62,8 +76,8 @@ public class ConsoleView {
         for (int i = 0; i < remainProcent; i++) {
             barDone.append(icon);
         }
-        String barRemain = bar.substring(remainProcent, bar.length());
-        return barDone+barRemain+" "+remainProcent*10+"%";
+        String barRemain = bar.substring(remainProcent);
+        return barDone + barRemain + " " + remainProcent * 10 + "%";
 
     }
 }

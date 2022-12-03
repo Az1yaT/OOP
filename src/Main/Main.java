@@ -1,4 +1,5 @@
 package Main;
+
 import Characters.*;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class Main {
             view();
             Scanner sc = new Scanner(System.in);
             String st = sc.nextLine();
-            for (int i =0; i < 10; i++) {
+            for (int i = 0; i < 10; i++) {
                 whiteSide.get(i).step(darkSide);
                 darkSide.get(i).step(whiteSide);
             }
@@ -32,7 +33,7 @@ public class Main {
         int y = 0;
 
         for (int i = 0; i < 10; i++) {
-            int randomNum = (int)(Math.random()*4);
+            int randomNum = (int) (Math.random() * 4);
             switch (randomNum) {
                 case 0 -> whiteSide.add(new Monk(darkSide, x++, y));
                 case 1 -> whiteSide.add(new Peasant(darkSide, x++, y));
@@ -45,7 +46,7 @@ public class Main {
         y = 9;
 
         for (int i = 0; i < 10; i++) {
-            int randomNum = (int)(Math.random()*4);
+            int randomNum = (int) (Math.random() * 4);
             switch (randomNum) {
                 case 0 -> darkSide.add(new Peasant(whiteSide, x++, y));
                 case 1 -> darkSide.add(new Spearman(whiteSide, x++, y));
@@ -53,7 +54,6 @@ public class Main {
                 default -> darkSide.add(new Xbowman(whiteSide, x++, y));
             }
         }
-
 
     }
 }

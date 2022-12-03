@@ -7,8 +7,9 @@ import java.util.ArrayList;
 public class Robber extends Warrior {
 
     boolean delivery;
+
     public Robber(ArrayList<BaseHero> group, int x, int y) {
-        super(8, 3, new int[]{2,4}, 10, 6, States.ALIVE);
+        super(8, 3, new int[] { 2, 4 }, 10, 6, States.ALIVE);
         super.group = group;
         delivery = false;
         super.position = new Position(x, y);

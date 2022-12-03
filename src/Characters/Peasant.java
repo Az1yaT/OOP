@@ -9,7 +9,7 @@ public class Peasant extends Warrior {
     boolean delivery;
 
     public Peasant(ArrayList<BaseHero> group, int x, int y) {
-        super(1, 1, new int[]{1,1}, 1, 3, States.ALIVE);
+        super(1, 1, new int[] { 1, 1 }, 1, 3, States.ALIVE);
         super.group = group;
         delivery = true;
         super.position = new Position(x, y);
