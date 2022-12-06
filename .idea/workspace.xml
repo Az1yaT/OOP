@@ -2,10 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4ab8731-e693-44b2-92dd-4dcd58b57103" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OOP.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Abstract/BaseHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Abstract/BaseHero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Abstract/BaseInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Abstract/BaseInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Abstract/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Abstract/Healer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Abstract/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Abstract/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Abstract/States.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Abstract/States.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Abstract/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Abstract/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Characters/Monk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Monk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Characters/Peasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Peasant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Characters/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Characters/Robber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Robber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Characters/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Sniper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Characters/Spearman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Spearman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Characters/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Characters/Xbowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Xbowman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/AnsiColors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/AnsiColors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ConsoleView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,13 +40,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aziya/OneDrive/Desktop/Codes/OOP&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/az1yat/Рабочий стол/Codes/OOP"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
