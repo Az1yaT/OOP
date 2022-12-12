@@ -13,8 +13,6 @@ public abstract class BaseHero implements BaseInterface {
     private int speed;
     private double maxHealth;
     private States state;
-    private static int idCounter;
-    private final int playerID;
     protected ArrayList<BaseHero> group;
     protected Position position;
 
@@ -25,12 +23,12 @@ public abstract class BaseHero implements BaseInterface {
         this.health = health;
         this.speed = speed;
         this.state = state;
-        playerID = idCounter++;
         this.maxHealth = health;
     }
 
     public void setState(States state) {
         this.state = state;
+        System.out.println(state);
     }
 
     public void setPosition(Position position) {
@@ -68,14 +66,6 @@ public abstract class BaseHero implements BaseInterface {
             this.health = health;
     }
 
-    public static int getIdCounter() {
-        return idCounter;
-    }
-
-    public int getPlayerID() {
-        return playerID;
-    }
-
     @Override
     public String getInfo() {
         String str = state + "";
@@ -93,6 +83,7 @@ public abstract class BaseHero implements BaseInterface {
     }
 
     protected void getAttack(BaseHero hero) {
+        setState(States.ATTACK);
         if (attack == hero.protection && speed < position.getDist(hero.getPosition()))
             hero.health -= (damage[0] + damage[1]) / 4;
         if (attack == hero.protection)
